@@ -7,7 +7,9 @@ Description:
     
 def scanner(file):
     '''
-    
+    The scanner function opens a jdx file, scans the document line by line, and finds 
+	the Delta-X number and First-X. Delta-X is the number that x is incremented by. X starts
+	at First-X. 
     '''
     file_scanner = open(file,"r")
     file_name = input("What would you like to name your file? Remember to add a .txt to the end.  ")
@@ -24,6 +26,9 @@ def scanner(file):
 
 def writer(x_val,delta_number,file_name,file):
     '''
+	Writer reopens the file and copies line by line any data that pertains to Absorbance. It writes
+	a new line with the x value incremented by the Delta-X value. For my own reference, it also
+	writes where specific zones lie and what resides in those groups.   
     '''
     new_file = open(file_name,"w")
     counter = float(x_val)
@@ -58,7 +63,7 @@ def writer(x_val,delta_number,file_name,file):
 #==========================================================
 def main():
     '''
-
+	Where it all happens. 
     '''
 
     to_open = input("Name of file to open: ")
